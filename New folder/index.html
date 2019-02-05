@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, tr, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+
+<body>
+<script>
+var count=0;
+var x=[];
+var o=[];
+function myfun(arg){
+count++;
+if(count%2==0){
+document.getElementById(arg).src='o.png';
+document.getElementById(arg).onclick='';
+o[arg]=1;
+}
+else{
+document.getElementById(arg).src='x.jpg';
+document.getElementById(arg).onclick='';
+x[arg]=1;
+}
+if((o[1]==1&&o[2]==1&&o[3]==1)||(o[4]==1&&o[5]==1&&o[6]==1)||(o[7]==1&&o[8]==1&&o[9]==1)||(o[1]==1&&o[4]==1&&o[7]==1)||(o[2]==1&&o[5]==1&&o[8]==1)||(o[3]==1&&o[6]==1&&o[9]==1)||(o[1]==1&&o[5]==1&&o[9]==1)||(o[3]==1&&o[5]==1&&o[7]==1))
+alert("player 2 win");
+
+else if((x[1]==1&&x[2]==1&&x[3]==1)||(x[4]==1&&x[5]==1&&x[6]==1)||(x[7]==1&&x[8]==1&&x[9]==1)||(x[1]==1&&x[4]==1&&x[7]==1)||(x[2]==1&&x[5]==1&&x[8]==1)||(x[3]==1&&x[6]==1&&x[9]==1)||(x[1]==1&&x[5]==1&&x[9]==1)||(x[3]==1&&x[5]==1&&x[7]==1))
+alert("player 1 win");
+
+else if(count==9)
+alert("match drawn");
+
+}
+
+</script>
+<center>
+<h2>Tic Tac Toe</h2>
+
+
+<table >
+  <tr>
+<td><img id="1" src="white.jpg" width="25px" height="25px" onclick="myfun(1)"></td>
+<td><img id="2"src="white.jpg"width="25px" height="25px"onclick="myfun(2)"></td>
+<td><img id="3"src="white.jpg"width="25px" height="25px"onclick="myfun(3)"></td>
+    </tr>
+<td><img id="4" src="white.jpg"width="25px" height="25px"onclick="myfun(4)"></td>
+<td><img id="5"src="white.jpg"width="25px" height="25px"onclick="myfun(5)"></td>
+<td><img id="6"src="white.jpg"width="25px" height="25px"onclick="myfun(6)"></td>
+  <tr>
+<td><img id="7"src="white.jpg"width="25px" height="25px"onclick="myfun(7)"></td>
+<td><img id="8"src="white.jpg"width="25px" height="25px" onclick="myfun(8)"></td>
+<td><img id="9"src="white.jpg"width="25px" height="25px" onclick="myfun(9)"></td>
+    </tr>
+  </table>
+
+</body>
+</html>
